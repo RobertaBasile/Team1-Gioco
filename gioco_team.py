@@ -231,7 +231,7 @@ class IndovinaEquazioni(Gioco):
     def init(self):
         super().init("Indovina equazioni")
 
-    def start(self, nome_utente):
+    def start(self, utente.get_nome()):
         print(f"Ciao {nome_utente}! In questo gioco dovrai risolvere un'equazione di primo grado. Se il risultato è con la virgola approssima alle prime due cifre significative! FAI VELOCE!")
 
         a = 0
@@ -253,12 +253,12 @@ class IndovinaEquazioni(Gioco):
             punteggio = time.time() - t1
             punteggio = round(punteggio, 3)
             if x  == sol:
-                print(nome_utente, "ci hai messo ", punteggio, " secondi per completarlo!")
+                print(utente.get_nome(), "ci hai messo ", punteggio, " secondi per completarlo!")
                 break
             else:
                 print("Ritenta!")
 
-        return punteggio
+        return calcola_punteggio()
 
 
 class Saltacavallo(Gioco):
