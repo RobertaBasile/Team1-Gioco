@@ -411,7 +411,7 @@ class SetteMezzo(Gioco):
             print("Il giocatore vince!")
         else:
             print("Il distributore_carte vince!")
-
+    return calcola_punteggio()
 
 class SassoCartaForbici(Gioco):
 
